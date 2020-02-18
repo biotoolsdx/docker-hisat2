@@ -42,7 +42,7 @@ RUN apt-get update  && apt-get install -y \
 WORKDIR /tmp/
 RUN wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-${hisat2_version}-Linux_x86_64.zip && \
     unzip hisat2-${hisat2_version}-Linux_x86_64.zip && \
-    cp -p hisat2-${hisat2_version}/hisat2 hisat2-${hisat2_version}/hisat* /usr/bin && \
+    cp -p hisat2-${hisat2_version}/hisat* /usr/bin && \
     cd /tmp/ && \
     wget -c https://github.com/samtools/samtools/releases/download/$samtools_version/samtools-$samtools_version.tar.bz2 && \
     tar -jxvf samtools-$samtools_version.tar.bz2 && \
